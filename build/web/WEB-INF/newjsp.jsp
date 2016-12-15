@@ -19,9 +19,9 @@
     <body>
         <%
             Class.forName("com.mysql.jdbc.Driver"); 
-            String url ="jdbc:mysql://localhost:3306/spacex";
+            String url ="jdbc:mysql://172.16.205.172/CentosPruebas/paracentos";
             String user= "root";
-            String password ="";
+            String password ="admin";
             
            try{               
             
