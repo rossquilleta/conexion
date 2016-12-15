@@ -22,11 +22,11 @@
             
             InitialContext initCtx=new InitialContext();
             Context envCtx = (Context) initCtx.lookup("java:comp/env");
-            dataSource = (DataSource)envCtx.lookup("jdbc/spacex");
+            dataSource = (DataSource)envCtx.lookup("jdbc/paracentos");
             Connection connection= dataSource.getConnection();
  
             Statement state = connection.createStatement();
-            ResultSet rs = state.executeQuery("SELECT nombre FROM cohete");
+            ResultSet rs = state.executeQuery("SELECT Nombre FROM socios");
             
             while(rs.next()){
             
