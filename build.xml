@@ -78,7 +78,7 @@
        <target name="despliegue" depends="">
         <mkdir dir="c:\apache\www"/>
         <copy file="./web/index.html" todir="c:\apache\www" />
-        <deploy url="http://172.16.205.134/manager/text" username="admin" password="admin" path="/WebApplication3" war="c:\temp\WebApplication3.war" update="true"/>
+        <deploy url="http://172.16.205.134/manager/text" username="admin" password="admin" path="/ConexionBD" war="./dist/ConexionBD.war" update="true"/>
 
 
     </target>
