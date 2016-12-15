@@ -68,4 +68,18 @@
     nbproject/build-impl.xml file. 
 
     -->
+    
+    <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask"/>
+    <taskdef name="start" classname="org.apache.catalina.ant.StartTask"/>
+    <taskdef name="stop" classname="org.apache.catalina.ant.StopTask"/>
+    <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"/>
+    <taskdef name="closeconnections" classname="es.elfframework.ant.CloseTomcatDataSource"/>
+    
+       <target name="despliegue" depends="">
+        <mkdir dir="c:\apache\www"/>
+        <copy file="./web/index.html" todir="c:\apache\www" />
+        <deploy url="http://172.16.205.134/manager/text" username="admin" password="admin" path="/WebApplication3" war="c:\temp\WebApplication3.war" update="true"/>
+
+
+    </target>
 </project>
