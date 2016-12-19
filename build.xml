@@ -76,8 +76,8 @@
     <taskdef name="closeconnections" classname="es.elfframework.ant.CloseTomcatDataSource"/>
     
        <target name="despliegue" depends="dist">
-        <mkdir dir="c:\apache\www"/>
-        <copy file="./web/index.html" todir="c:\apache\www" />
+        <!--<mkdir dir="c:\apache\www"/>
+        <copy file="./web/index.html" todir="c:\apache\www" />-->
         <deploy url="http://172.16.205.134/manager/text" username="admin" password="admin" path="/ConexionBD" war="./dist/ConexionBD.war" update="true"/>
 
 
